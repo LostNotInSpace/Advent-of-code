@@ -7,7 +7,7 @@ def count_increases(dist_vec):
     return int(sum(delta_vec > 0))
 
 def window_sum(vec, n=3):
-    m = len(vec)
+    m = len(vec) - (n-1)
     assert(m >= n)
     sum_vec = np.array([sum(vec[i:i+n]) for i in range(m)])
     return sum_vec
