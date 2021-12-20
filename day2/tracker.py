@@ -1,5 +1,4 @@
 import numpy as np
-import os
 
 class Submarine:
     def __init__(self) -> None:
@@ -32,9 +31,6 @@ class Submarine:
 
 def main():
     sub = Submarine()
-    current_directory = os.getcwd()
-    new_directory = current_directory + "\\Day 2"
-    os.chdir(new_directory)
 
     with open('day2input.txt', 'r') as input_file:
         move = input_file.readline()
@@ -42,8 +38,6 @@ def main():
             sub.move(move)
             move = input_file.readline()
     sub.announce_position()
-
-    os.chdir(current_directory)
     
 
 if __name__ == "__main__":
